@@ -45,40 +45,29 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.8</version>
+				<groupId>org.jsweet</groupId>
+				<artifactId>jsweet-maven-plugin</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<configuration>
+					<debug>true</debug>
+					<outDir>target/js</outDir>
+					<targetVersion>ES3</targetVersion>
+				</configuration>
 				<executions>
 					<execution>
 						<id>generate-js</id>
 						<phase>generate-sources</phase>
 						<goals>
-							<goal>run</goal>
+							<goal>jsweet</goal>
 						</goals>
-						<configuration>
-							<target>
-								<property name="compile_classpath" refid="maven.compile.classpath" />
-								<java classname="org.jsweet.JSweetCommandLineLauncher"
-									fork="true" failonerror="true">
-									<arg value="--debug" />
-									<!-- input dir -->
-									<arg value="-i" />
-									<arg value="src/main/java" />
-									<!-- js output dir -->
-									<arg value="-o" />
-									<arg value="target/js" />
-									<classpath>
-										<pathelement path="${compile_classpath}" />
-									</classpath>
-								</java>
-							</target>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -89,16 +78,16 @@
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>
-											org.apache.maven.plugins
+											org.jsweet
 										</groupId>
 										<artifactId>
-											maven-antrun-plugin
+											jsweet-maven-plugin
 										</artifactId>
 										<versionRange>
-											[1.8,)
+											[1.0.0-SNAPSHOT,)
 										</versionRange>
 										<goals>
-											<goal>run</goal>
+											<goal>jsweet</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -114,9 +103,9 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.jsweet.candies</groupId>
-			<artifactId>jsweet-core</artifactId>
-			<version>1.0.1</version>
+			<groupId>org.jsweet</groupId>
+			<artifactId>jsweet-core-strict</artifactId>
+			<version>1.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jsweet</groupId>
