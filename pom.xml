@@ -60,7 +60,7 @@
 			<plugin>
 				<groupId>org.jsweet</groupId>
 				<artifactId>jsweet-maven-plugin</artifactId>
-				<version>1.0.0-SNAPSHOT</version>
+				<version>1.0.0-RC1</version>
 				<configuration>
 					<sourceMap>true</sourceMap>
 					<outDir>target/js</outDir>
@@ -97,7 +97,7 @@
 											jsweet-maven-plugin
 										</artifactId>
 										<versionRange>
-											[1.0.0-SNAPSHOT,)
+											[1.0.0-RC1,)
 										</versionRange>
 										<goals>
 											<goal>jsweet</goal>
@@ -118,12 +118,12 @@
 		<dependency>
 			<groupId>org.jsweet.candies</groupId>
 			<artifactId>jsweet-core</artifactId>
-			<version>1.0.2-SNAPSHOT</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jsweet</groupId>
 			<artifactId>jsweet-transpiler</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>1.0.0-RC1</version>
 		</dependency>
 	</dependencies>
 </project>
