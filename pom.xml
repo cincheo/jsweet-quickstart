@@ -60,7 +60,7 @@
 			<plugin>
 				<groupId>org.jsweet</groupId>
 				<artifactId>jsweet-maven-plugin</artifactId>
-				<version>1.0.0-RC1</version>
+				<version>1.0.0</version>
 				<configuration>
 					<sourceMap>true</sourceMap>
 					<outDir>target/js</outDir>
@@ -123,7 +123,7 @@
 		<dependency>
 			<groupId>org.jsweet</groupId>
 			<artifactId>jsweet-transpiler</artifactId>
-			<version>1.0.0-RC1</version>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 </project>
