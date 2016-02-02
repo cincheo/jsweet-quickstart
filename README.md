@@ -13,6 +13,7 @@ A simple project to get started with JSweet. This project just contains a main m
 
 ## Prerequisites
 
-The `node` and `npm` executables must be in the path (https://nodejs.org).
-Install Maven (https://maven.apache.org/install.html).
+- Java 8 JDK is required. Type in ``java -version`` in a console to make sure that you have a >1.8 JDK.
+- The `node` and `npm` executables must be in the path (https://nodejs.org).
+- Install Maven (https://maven.apache.org/install.html).
 
