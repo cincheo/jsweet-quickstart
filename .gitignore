@@ -2,5 +2,4 @@
 /target/
 .generated
 .ts
-.settings
 .jsweet
