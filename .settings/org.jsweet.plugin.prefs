@@ -1,3 +1,4 @@
+compiler.candyJsFolder=webapp
 compiler.debugMode=ts
 compiler.javascriptFolder=target/js
 compiler.moduleKind=none
