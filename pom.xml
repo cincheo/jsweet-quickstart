@@ -67,7 +67,6 @@
 					<outDir>target/js</outDir>
 					<candiesJsOut>webapp</candiesJsOut>
 					<targetVersion>ES3</targetVersion>
-					<module>commonjs</module>
 				</configuration>
 				<executions>
 					<execution>
