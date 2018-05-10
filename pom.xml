@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>org.jsweet</groupId>
 			<artifactId>jsweet-core</artifactId>
-			<version>5-20170726</version>
+			<version>6-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jsweet.candies</groupId>
