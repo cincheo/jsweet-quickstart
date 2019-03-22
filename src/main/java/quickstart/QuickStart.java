@@ -14,6 +14,7 @@ import def.js.Array;
 public class QuickStart {
 
 	public static void main(String[] args) {
+		
 		// you can use regular Java API
 		List<String> l = new ArrayList<>();
 		l.add("Hello");
