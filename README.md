@@ -11,6 +11,13 @@ A simple project to get started with JSweet. This project just contains a main m
 > firefox webapp/index.html
 ```
 
+You can also watch your JSweet (.java) source files for modifications using
+```
+mvn clean jsweet:watch
+```
+It will transpile automatically when you save a source file.
+Be sure that there are not transpilation error in your console, though.
+
 ## Modify
 
 At any time, you can modify the Java files (or add new files) and run ``mvn generate-sources`` to generate the corresponding JavaScript files. You can then use them in the ``index.html`` file (``<script>`` tags).
