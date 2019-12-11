@@ -1,4 +1,4 @@
-# JSweet quick start
+# JSweet quick start [![](https://github.com/cincheo/jsweet-quickstart/workflows/JSweetBuild/badge.svg)](https://github.com/cincheo/jsweet-quickstart/actions)
 
 A simple project to get started with JSweet. This project just contains a main method that shows 'Hello world' messages in two different ways. The program uses the [J4TS](https://github.com/cincheo/j4ts) candy to access `java.util` API, and the jQuery candy. Programmers can use it to set up a new JSweet project and try out some basic features.
 
