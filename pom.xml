@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jsweet</groupId>
 	<artifactId>jsweet-quickstart</artifactId>
-	<version>2.3.0-SNAPSHOT</version>
-	<name>JSweet v2 quick start</name>
-	<description>A simple project structure to get started with JSweet v2</description>
+	<version>${jsweet.transpiler.version}</version>
+	<name>JSweet quick start</name>
+	<description>A simple project structure to get started with JSweet</description>
 	<developers>
 		<developer>
 			<id>rpawlak</id>
@@ -13,6 +13,12 @@
 			<email>renaud.pawlak@gmail.com</email>
 		</developer>
 	</developers>
+	<contributors>
+		<contributor>
+			<name>Louis Grignon</name>
+			<email>louis.grignon@gmail.com</email>
+		</contributor>
+	</contributors>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -20,6 +26,13 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	<properties>
+		<jsweet.transpiler.version>3.0.0-SNAPSHOT</jsweet.transpiler.version>
+		<jsweet.core.version>6.0.2</jsweet.core.version>
+		<java.version.release>11</java.version.release>
+		<java.version>1.${java.version.release}</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>jsweet-plugins-release</id>
@@ -50,17 +63,19 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<fork>true</fork>
+					<release>${java.version.release}</release>
+					<compilerVersion>${java.version}</compilerVersion>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.jsweet</groupId>
 				<artifactId>jsweet-maven-plugin</artifactId>
-				<version>2.3.0-SNAPSHOT</version>
+				<version>${jsweet.transpiler.version}</version>
 				<configuration>
 					<verbose>true</verbose>
 					<tsOut>target/ts</tsOut>
@@ -122,7 +137,7 @@
 		<dependency>
 			<groupId>org.jsweet</groupId>
 			<artifactId>jsweet-core</artifactId>
-			<version>6</version>
+			<version>${jsweet.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jsweet.candies</groupId>
