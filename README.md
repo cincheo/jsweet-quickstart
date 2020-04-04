@@ -28,7 +28,7 @@ If you want to use a JavaScript library (besides jQuery which is already enabled
 
 ## Prerequisites
 
-- Java 8 JDK is required. Type in ``java -version`` in a console to make sure that you have a >1.8 JDK.
+- Java 11 JDK is required. Type in ``java -version`` in a console to make sure that you have a >11 JDK.
 - The `node` and `npm` executables must be in the path (https://nodejs.org).
 - Install Maven (https://maven.apache.org/install.html).
 
