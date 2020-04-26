@@ -84,6 +84,7 @@
 					<targetVersion>ES6</targetVersion>
 					<module>none</module>
 					<moduleResolution>classic</moduleResolution>
+                                        <bundle>true</bundle>
 				</configuration>
 				<executions>
 					<execution>
