@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.jsweet</groupId>
+	<groupId>org.jsweet.v3</groupId>
 	<artifactId>jsweet-quickstart</artifactId>
 	<version>${jsweet.transpiler.version}</version>
 	<name>JSweet quick start</name>
@@ -27,8 +27,8 @@
 		</license>
 	</licenses>
 	<properties>
-		<jsweet.transpiler.version>3.0.0-RC3</jsweet.transpiler.version>
-		<jsweet.core.version>6.2.0</jsweet.core.version>
+		<jsweet.transpiler.version>3.0.0-SNAPSHOT</jsweet.transpiler.version>
+		<jsweet.core.version>6.0.0</jsweet.core.version>
 		<java.version.release>11</java.version.release>
 		<java.version>1.${java.version.release}</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -73,7 +73,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.jsweet</groupId>
+				<groupId>org.jsweet.v3</groupId>
 				<artifactId>jsweet-maven-plugin</artifactId>
 				<version>${jsweet.transpiler.version}</version>
 				<configuration>
@@ -142,14 +142,14 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.jsweet</groupId>
+			<groupId>org.jsweet.v3</groupId>
 			<artifactId>jsweet-core</artifactId>
 			<version>${jsweet.core.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.jsweet.candies</groupId>
+			<groupId>org.jsweet.v3.candies</groupId>
 			<artifactId>jquery</artifactId>
-			<version>1.10.0-20170726</version>
+			<version>1.10.0-20200915</version>
 		</dependency>
 	</dependencies>
 </project>
