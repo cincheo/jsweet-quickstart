@@ -1,39 +1,32 @@
 package quickstart;
 
-import static def.dom.Globals.alert;
-import static def.dom.Globals.document;
-import static def.jquery.Globals.$;
+import def.dom.Globals;
+import def.es6.FetchEvent;
+import def.js.Promise;
+import def.whatwg_fetch.Response;
+import def.whatwg_fetch.Request;
 
-import java.util.ArrayList;
-import java.util.List;
+import static jsweet.util.Lang.asyncReturn;
 
-import def.dom.HTMLCollectionOf;
-import def.dom.HTMLDivElement;
-import def.js.Array;
-import jsweet.util.StringTypes;
+import jsweet.lang.Async;
+
 
 /**
  * This class is used within the webapp/index.html file.
  */
 public class QuickStart {
 
-	public static void main(String[] args) {
-		// you can use regular Java API
-		List<String> l = new ArrayList<>();
-		l.add("Hello");
-		l.add("world");
-		// and you can also use regular JavaScript APIs
-		Array<String> a = new Array<>();
-		a.push("Hello", "world");
-		// use of jQuery with the jQuery candy
-		$("#target").text(l.toString());
-		// use of the JavaScript DOM API
-		alert(a.toString());
+  public static void main(String[] args) {
+    Globals.self.addEventListener("fetch", (event) -> {
+        FetchEvent e = (FetchEvent) event;
+        e.respondWith(handleRequest(e.request));
+      });
+  }
 
-		HTMLCollectionOf<HTMLDivElement> nodeList = document.getElementsByTagName(StringTypes.div);
-		for (HTMLDivElement element : nodeList) {
-			element.innerText = "Hello again in vanilla JS";
-		}
-	}
-
+  @Async
+  public static Promise<Response> handleRequest(Request request) {
+    // make sure bundling mutliple files is working
+    String secret = SomeOther.secret;
+    return asyncReturn(new Response("Hello from Java via JSweet, your secret is " + secret));
+  }
 }

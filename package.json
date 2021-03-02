@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "hello-java-workers",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
+  "main": "target/js/bundle.js",
+  "scripts": {
+      "build": "mvn generate-sources && tsc --target ES2020 --lib webworker,es2020 --outFile target/js/bundle.js target/ts/bundle.ts"
+  },
+  "author": "Cody Koeninger <ckoeninger@cloudflare.com>",
+  "license": "MIT"
+}

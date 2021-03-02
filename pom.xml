@@ -77,8 +77,11 @@
 				<artifactId>jsweet-maven-plugin</artifactId>
 				<version>${jsweet.transpiler.version}</version>
 				<configuration>
-					<verbose>true</verbose>
-					<tsOut>target/ts</tsOut>
+				  <verbose>true</verbose>
+                                  <bundle>true</bundle>
+				  <tsOut>target/ts</tsOut>
+                                  <!-- the old whatwg-fetch candy seems to include conflicting d.ts files, running tsc manually -->
+                                  <tsOnly>true</tsOnly>
 					<outDir>target/js</outDir>
 					<candiesJsOut>webapp/candies</candiesJsOut>
 					<targetVersion>ES6</targetVersion>
@@ -146,10 +149,10 @@
 			<artifactId>jsweet-core</artifactId>
 			<version>${jsweet.core.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.jsweet.candies</groupId>
-			<artifactId>jquery</artifactId>
-			<version>1.10.0-20170726</version>
-		</dependency>
+                <dependency>
+                  <groupId>org.jsweet.candies</groupId>
+                  <artifactId>whatwg-fetch</artifactId>
+                  <version>0.0.0-1.0.0-20160202</version>
+                </dependency>
 	</dependencies>
 </project>
