@@ -25,8 +25,8 @@ public class QuickStart {
 
   @Async
   public static Promise<Response> handleRequest(Request request) {
-    // make sure bundling mutliple files is working
+    // make sure bundling multiple files is working
     String secret = SomeOther.secret;
-    return asyncReturn(new Response("Hello from Java via JSweet, your secret is " + secret));
+    return asyncReturn(new Response("Hello from Java via JSweet, your value from another class is " + secret + "\n"));
   }
 }
