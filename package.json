@@ -8,5 +8,5 @@
       "build": "mvn generate-sources && tsc --target ES2020 --lib webworker,es2020 --outFile target/js/bundle.js target/ts/bundle.ts"
   },
   "author": "Cody Koeninger <ckoeninger@cloudflare.com>",
-  "license": "MIT"
+  "license": "Apache 2"
 }
